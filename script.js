@@ -14,6 +14,10 @@ cancelpopup.addEventListener("click",function(event){
     popupoverlay.style.display="none";
     popupbox.style.display="none";
 })
+popupoverlay.addEventListener("click",function(){
+    popupoverlay.style.display="none";
+    popupbox.style.display="none";
+})
 
 //select container,add-book,book-title-input,book-author-input,book-description-input
 var container=document.querySelector(".container");
