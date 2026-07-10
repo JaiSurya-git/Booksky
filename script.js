@@ -68,12 +68,18 @@ function updateBookCount(){
     
     var bookcontainercount=document.querySelectorAll(".book-container").length;
     var heading=document.getElementById("book-count");
-    if (bookcontainercount>1){
-        heading.textContent=`📚 BookSky (${bookcontainercount} Books)`;
-    }
-    else{
+    if (bookcontainercount==1){
         heading.textContent=`📚 BookSky (${bookcontainercount} Book)`;
     }
-    
+    else{
+        heading.textContent=`📚 BookSky (${bookcontainercount} Books)`;
+    }
+    var divempty=document.querySelector("#empty-message");
+    if (bookcontainercount==0){
+        divempty.style.display="block";
+    }
+    else{
+        divempty.style.display="none";
+    }
     
 }

@@ -144,3 +144,10 @@ body{
     background-color: white;
     color: black;
 }
+
+#empty-message{
+    display: block;
+    margin-top: 18%;
+    text-align: center;
+    display:none;
+}
