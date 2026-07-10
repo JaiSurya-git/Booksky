@@ -34,6 +34,9 @@ addbook.addEventListener("click",function(event){
     popupoverlay.style.display="none";
     popupbox.style.display="none";
 
+    booktitleinput.value = "";
+    bookauthorinput.value = "";
+    bookdescriptioninput.value = "";
 })
 
 function deletebook(event){
