@@ -28,6 +28,10 @@ var bookdescriptioninput=document.getElementById("book-description-input");
 
 addbook.addEventListener("click",function(event){
     event.preventDefault();
+    if ((booktitleinput.value.trim()=="")||(bookauthorinput.value.trim()=="")||(bookdescriptioninput.value.trim()=="")){
+        alert("Please fill all the fields.");
+        return;
+    }
     var div=document.createElement("div");
     div.setAttribute("class","book-container");
     div.innerHTML=`<h2>${booktitleinput.value}</h2>
@@ -44,5 +48,9 @@ addbook.addEventListener("click",function(event){
 })
 
 function deletebook(event){
-    event.target.parentElement.remove();
+    var conf=confirm("Are you sure you want to delete?");
+    if (conf){
+        event.target.parentElement.remove();
+    }
+    
 }

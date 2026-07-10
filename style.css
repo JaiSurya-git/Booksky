@@ -25,6 +25,10 @@ body{
     margin: 30px;
     display: inline-block;
     vertical-align: top;
+    transition: 0.3s;
+}
+.book-container:hover{
+    background-color: #222222;
 }
 
 .book-container h2{
@@ -41,6 +45,11 @@ body{
     padding-right: 10px;
     border: none;
     margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.book-container button:hover{
+    background-color: aliceblue;
 }
 
 .add-button{
@@ -56,6 +65,13 @@ body{
     position: fixed;
     bottom: 30px;
     right: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.add-button:hover{
+    background-color:black;
+    color: cadetblue;
+    transform: scale(1.1);
 }
 
 .popup-overlay{
@@ -121,4 +137,10 @@ body{
     color: white;
     margin: 5px;
     border-radius: 10%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.popup-box button:hover{
+    background-color: white;
+    color: black;
 }
