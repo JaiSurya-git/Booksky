@@ -151,3 +151,12 @@ body{
     text-align: center;
     display:none;
 }
+
+#success-message{
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}

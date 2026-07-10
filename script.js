@@ -46,6 +46,12 @@ addbook.addEventListener("click",function(event){
             <p>${bookdescriptioninput.value}</p>
             <button onclick="deletebook(event)">Delete</button>`;
     container.append(div);
+    var successMessage=document.getElementById("success-message");
+    successMessage.style.display = "block";
+    setTimeout(function(){
+        successMessage.style.display = "none";
+    }, 2000);
+
     popupoverlay.style.display="none";
     popupbox.style.display="none";
 
@@ -53,6 +59,8 @@ addbook.addEventListener("click",function(event){
     bookauthorinput.value = "";
     bookdescriptioninput.value = "";
     updateBookCount();
+
+    
 })
 
 function deletebook(event){
