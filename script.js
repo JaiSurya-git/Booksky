@@ -18,6 +18,13 @@ popupoverlay.addEventListener("click",function(){
     popupoverlay.style.display="none";
     popupbox.style.display="none";
 })
+document.addEventListener("keydown", function(event) {
+    if (event.key == "Escape" && popupbox.style.display == "block") {
+        popupoverlay.style.display = "none";
+        popupbox.style.display = "none";
+    }
+});
+
 
 //select container,add-book,book-title-input,book-author-input,book-description-input
 var container=document.querySelector(".container");
