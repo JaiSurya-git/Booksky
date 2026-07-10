@@ -52,6 +52,7 @@ addbook.addEventListener("click",function(event){
     booktitleinput.value = "";
     bookauthorinput.value = "";
     bookdescriptioninput.value = "";
+    updateBookCount();
 })
 
 function deletebook(event){
@@ -59,5 +60,20 @@ function deletebook(event){
     if (conf){
         event.target.parentElement.remove();
     }
+    updateBookCount();
+    
+}
+
+function updateBookCount(){
+    
+    var bookcontainercount=document.querySelectorAll(".book-container").length;
+    var heading=document.getElementById("book-count");
+    if (bookcontainercount>1){
+        heading.textContent=`📚 BookSky (${bookcontainercount} Books)`;
+    }
+    else{
+        heading.textContent=`📚 BookSky (${bookcontainercount} Book)`;
+    }
+    
     
 }
